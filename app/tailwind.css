@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Raised classic-Windows bevel: light top-left, dark bottom-right. */
+  .bevel-out {
+    background: #c0c0c0;
+    box-shadow:
+      inset -1px -1px 0 0 #808080,
+      inset 1px 1px 0 0 #ffffff,
+      inset -2px -2px 0 0 #a0a0a0,
+      inset 2px 2px 0 0 #dfdfdf;
+  }
+
+  /* Sunken bevel for panels and the LED wells. */
+  .bevel-in {
+    box-shadow:
+      inset 1px 1px 0 0 #808080,
+      inset -1px -1px 0 0 #ffffff,
+      inset 2px 2px 0 0 #a0a0a0,
+      inset -2px -2px 0 0 #dfdfdf;
+  }
+
+  /* Thin sunken edge, used around the grid. */
+  .bevel-in-thin {
+    box-shadow:
+      inset 1px 1px 0 0 #808080,
+      inset -1px -1px 0 0 #ffffff;
+  }
+
+  /* A tile already stepped on: flat, with a hairline on the top and left. */
+  .tile-revealed {
+    background: #c0c0c0;
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+  }
+}
+
+@layer utilities {
+  .no-select {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+}
+
+/* The Bliss wallpaper, approximated with gradients instead of the original photo. */
+.bliss {
+  background:
+    /* Wispy clouds: tight bright cores fading into the sky. */
+    radial-gradient(ellipse 13% 3.5% at 17% 21%, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.28) 55%, transparent 78%),
+    radial-gradient(ellipse 8% 2.2% at 25% 18%, rgba(255, 255, 255, 0.8), transparent 75%),
+    radial-gradient(ellipse 15% 3% at 74% 27%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2) 55%, transparent 80%),
+    radial-gradient(ellipse 7% 2% at 60% 11%, rgba(255, 255, 255, 0.7), transparent 78%),
+    radial-gradient(ellipse 10% 2.4% at 91% 15%, rgba(255, 255, 255, 0.6), transparent 80%),
+    /* The rolling green hill: an ellipse cropped at the horizon. */
+    radial-gradient(
+      ellipse 150% 92% at 48% 148%,
+      #8fc93a 0%,
+      #6aa62f 30%,
+      #4f8a1c 62%,
+      #3d6f14 99.4%,
+      transparent 99.6%
+    ),
+    /* Sky. */
+    linear-gradient(180deg, #1a5fb8 0%, #3d8ddb 40%, #82bdec 72%, #c5e2f6 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
