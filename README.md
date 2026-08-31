@@ -77,11 +77,12 @@ app/
   routes/
     _index.tsx     Arma la ventana y conecta el reducer
   root.tsx       Documento HTML y fondo estilo Bliss
-  tailwind.css   Biseles 3D y el degradado del fondo
+  tailwind.css   Biseles 3D y el fondo Bliss
 public/
   faces/         Las cuatro caritas pixel art del panel
   tiles/         La gota de agua de la baldosa floja
   favicon.png    La misma gota, como ícono de la pestaña
+  bliss.jpg      El fondo de escritorio de Windows XP
 ```
 
 ## Deploy en Railway
@@ -107,6 +108,8 @@ Las imágenes del juego, todas pixel art, normalizadas a PNG cuadrado y transpar
 | `faces/surprised.png` | [Pixilart](https://art.pixilart.com/sr21eb54f1253aws3.png) |
 | `faces/cool.png` | [Tenor](https://media.tenor.com/VUK9_wBOpTcAAAAe/minesweeper-swag.png) |
 | `tiles/water-drop.png`, `favicon.png` | [Shutterstock 2609055147](https://www.shutterstock.com/image-vector/single-drop-water-pixel-art-260nw-2609055147.jpg) |
+| `bliss.jpg` | *Bliss*, el fondo de escritorio de Windows XP (Charles O'Rear / Microsoft), reescalado a 1920px y comprimido a JPEG |
 
-Las dos de Wikimedia Commons son dominio público. Las otras tres no declaran una licencia libre:
-para un proyecto personal no cambia nada, pero conviene revisarlo si el juego se publica.
+Las dos de Wikimedia Commons son dominio público. Las otras no declaran una licencia libre y
+*Bliss* es una foto con copyright de Microsoft: para un proyecto personal no cambia nada, pero
+conviene revisarlo si el juego se publica.

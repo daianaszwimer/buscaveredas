@@ -12,7 +12,9 @@ import stylesheet from "~/tailwind.css?url";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
-  { rel: "icon", href: "/favicon.png", type: "image/png" },
+  // The ?v= is a cache key: browsers keep favicons in a separate store that a
+  // hard reload does not clear, so bump it whenever the icon changes.
+  { rel: "icon", href: "/favicon.png?v=2", type: "image/png" },
 ];
 
 export const meta: MetaFunction = () => [
