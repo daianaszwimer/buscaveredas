@@ -71,13 +71,17 @@ app/
     MenuBar.tsx    Menús Juego / Ayuda
     Board.tsx      Grilla y celdas
     LedDisplay.tsx Contadores rojos de siete segmentos
-    SmileyButton.tsx  La carita (normal, empapada, con anteojos)
-    TileIcons.tsx  Baldosa floja, banderita, banderita tachada
+    SmileyButton.tsx  La carita en sus cuatro estados (PNGs de public/faces)
+    TileIcons.tsx  Gota de agua (PNG), banderita y banderita tachada (SVG)
     Dialog.tsx     Modales de ayuda
   routes/
     _index.tsx     Arma la ventana y conecta el reducer
   root.tsx       Documento HTML y fondo estilo Bliss
   tailwind.css   Biseles 3D y el degradado del fondo
+public/
+  faces/         Las cuatro caritas pixel art del panel
+  tiles/         La gota de agua de la baldosa floja
+  favicon.png    La misma gota, como ícono de la pestaña
 ```
 
 ## Deploy en Railway
@@ -90,3 +94,19 @@ El repo trae un `Dockerfile`, así que Railway lo detecta y buildea solo:
 
 Al ser todo client-side no hay estado compartido entre requests, así que se puede escalar a las
 réplicas que quieras.
+
+## Créditos
+
+Las imágenes del juego, todas pixel art, normalizadas a PNG cuadrado y transparente de 96×96
+(la gota además a 128×128 para el favicon):
+
+| Asset | Origen |
+| --- | --- |
+| `faces/smile.png` | [MINESWEEPER_SMILEY.png](https://commons.wikimedia.org/wiki/File:MINESWEEPER_SMILEY.png) — Wikimedia Commons, dominio público (Microsoft) |
+| `faces/dead.png` | [MINESWEEPER_SMILEY_DEATH.png](https://commons.wikimedia.org/wiki/File:MINESWEEPER_SMILEY_DEATH.png) — Wikimedia Commons, dominio público (Microsoft) |
+| `faces/surprised.png` | [Pixilart](https://art.pixilart.com/sr21eb54f1253aws3.png) |
+| `faces/cool.png` | [Tenor](https://media.tenor.com/VUK9_wBOpTcAAAAe/minesweeper-swag.png) |
+| `tiles/water-drop.png`, `favicon.png` | [Shutterstock 2609055147](https://www.shutterstock.com/image-vector/single-drop-water-pixel-art-260nw-2609055147.jpg) |
+
+Las dos de Wikimedia Commons son dominio público. Las otras tres no declaran una licencia libre:
+para un proyecto personal no cambia nada, pero conviene revisarlo si el juego se publica.
